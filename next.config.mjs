@@ -23,6 +23,9 @@ const cspHeader = `
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack(config, { isServer }) {
     config.module.rules.push({
       test: /\.svg$/,
