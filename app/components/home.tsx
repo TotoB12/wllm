@@ -245,7 +245,7 @@ const useWebLLM = () => {
         // 10s per heartbeat, dead after 30 seconds of inactivity
         setWebllmAlive(
           !!webllm.webllm.engine &&
-            (webllm.webllm.engine as ServiceWorkerMLCEngine).missedHeatbeat < 3,
+            (webllm.webllm.engine as ServiceWorkerMLCEngine).missedHeartbeat < 3,
         );
       }
     }, 10_000);
